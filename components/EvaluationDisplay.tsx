@@ -37,11 +37,11 @@ export function EvaluationDisplay() {
     return "text-red-500";
   };
 
-  // Progress bar color based on score
-  const getProgressColor = (score: number) => {
-    if (score >= 0.7) return "bg-green-500";
-    if (score >= 0.4) return "bg-yellow-500";
-    return "bg-red-500";
+  // Progress bar color classes based on score
+  const getProgressColorClass = (score: number) => {
+    if (score >= 0.7) return "progress-green";
+    if (score >= 0.4) return "progress-yellow";
+    return "progress-red";
   };
 
   return (
@@ -77,8 +77,7 @@ export function EvaluationDisplay() {
 
             <Progress 
               value={currentEvaluation.overall_score * 100} 
-              className="h-2 [&>div]:bg-blue-500"
-              indicatorClassName={getProgressColor(currentEvaluation.overall_score)}
+              className="h-2"
             />
 
             <div className="grid gap-3 mt-4">
@@ -99,7 +98,6 @@ export function EvaluationDisplay() {
                     <Progress 
                       value={score * 100} 
                       className="h-2 w-24"
-                      indicatorClassName={getProgressColor(score)}
                     />
                     <span className={`text-sm font-medium ${getScoreColor(score)}`}>
                       {formatScore(score)}

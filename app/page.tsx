@@ -2,7 +2,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LandingHero } from '@/components/LandingHero';
 import { FeatureSection } from '@/components/FeatureSection';
-import { Simulation } from '@/components/Simulation';
+// import { Simulation } from '@/components/Simulation';
 import { Container } from '@/components/ui/container';
 
 export default function Home() {
@@ -22,9 +22,9 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="mt-8">
+          {/* <div className="mt-8">
             <Simulation />
-          </div>
+          </div> */}
         </Container>
       </section>
       
