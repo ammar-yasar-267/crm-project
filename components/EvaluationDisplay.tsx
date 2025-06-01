@@ -77,7 +77,7 @@ export function EvaluationDisplay() {
 
             <Progress 
               value={currentEvaluation.overall_score * 100} 
-              className="h-2"
+              className="h-2 [&>div]:bg-blue-500"
               indicatorClassName={getProgressColor(currentEvaluation.overall_score)}
             />
 
